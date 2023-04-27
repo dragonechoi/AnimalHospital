@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_24"
+        app:showAsAction="always"
+        android:title="HOME"/>
+
+    <item android:id="@+id/search_tab"
+        android:title="search"
+        android:icon="@drawable/baseline_try"
+        app:showAsAction="always"/>
+    <item android:id="@+id/proufil_tab"
+        android:title="proufil"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_cameraswitch_24"/>
+    <item android:id="@+id/seting"
+        android:title="set"
+        android:icon="@drawable/baseline_settings_24"
+        app:showAsAction="always"/>
+
+</menu>

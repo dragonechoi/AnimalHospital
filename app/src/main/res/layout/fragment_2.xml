@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_SecondPage"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#0E4B90">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/animal_haspital"
+                android:layout_gravity="center|clip_horizontal"
+                android:layout_marginRight="15dp"/>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/sc_rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_search_24"
+            android:layout_toRightOf="@id/et_search"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/white"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_centerHorizontal="true"
+            android:hint="시,도 검색"
+            android:textColorHint="#57bd42"
+            android:inputType="text"
+            android:shadowRadius="@integer/material_motion_duration_long_1"/>
+
+        <TextView
+            android:id="@+id/end_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_search"
+            android:text="---------------------------------------------------------------------------------------------------"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/end_line"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </RelativeLayout>
+</LinearLayout>

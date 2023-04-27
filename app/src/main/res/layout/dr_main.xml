@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0E4B90">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/proufail"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/dragone" />
+
+    <TextView
+        android:id="@+id/proufail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최용석"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_below="@id/proufail"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123456789"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/proufail_name"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

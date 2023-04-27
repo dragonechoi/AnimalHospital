@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardCornerRadius="16dp"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/app_logo"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/ic_android_black_24dp"/>
+
+        <TextView
+            android:id="@+id/BIZPLC_NM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/app_logo"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/app_logo"
+            android:text="병원"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/REFINE_ROADNM_ADDR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="경기도 수원시 권선구 OO로"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:layout_marginLeft="8dp"
+            android:textStyle="italic"
+            android:layout_below="@id/BIZPLC_NM"
+            android:layout_alignLeft="@id/BIZPLC_NM"/>
+
+        <TextView
+            android:id="@+id/LOCPLC_FACLT_TELNO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tel num"
+            android:layout_below="@id/REFINE_LOTNO_ADDR"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignBaseline="@id/iv_Call"/>
+        <TextView
+            android:id="@+id/tv_open_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OPEN"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/teal_700"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="34dp"
+            android:layout_alignBottom="@+id/LOCPLC_FACLT_TELNO"/>
+
+
+        <ImageButton
+            android:id="@+id/iv_Call"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/REFINE_LOTNO_ADDR"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/white"
+            android:minHeight="48dp"
+            android:scaleType="center"
+            android:src="@drawable/baseline_call_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/REFINE_LOTNO_ADDR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="경기도 수원시 권선구 구운동 ~~"
+            android:textSize="8sp"
+            android:layout_below="@id/REFINE_ROADNM_ADDR"
+            android:layout_alignLeft="@id/BIZPLC_NM" />
+
+        <TextView
+            android:id="@+id/REFINE_ZIP_CD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="우편 번호"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
