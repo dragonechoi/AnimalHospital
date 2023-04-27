@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 public class Intro extends MainActivity{
     TextView tv;
     TextView tv_tip;

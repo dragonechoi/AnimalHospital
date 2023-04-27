@@ -9,7 +9,7 @@ public class AnimalItem {
 
     String REFINE_ZIP_CD;
 
-    int app_logo=R.drawable.animal_haspital;
+    int app_logo= R.drawable.animal_haspital;
     int iv_Call=R.drawable.baseline_call_24;
 
     public AnimalItem(String BIZPLC_NM, String REFINE_ROADNM_ADDR, String REFINE_LOTNO_ADDR,String REFINE_ZIP_CD, String BSN_STATE_NM, String LOCPLC_FACLT_TELNO, int app_logo, int iv_Call) {

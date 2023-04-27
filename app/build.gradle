@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.cys.animalhospital2'
+    namespace 'com.cys.animalhospital'
     compileSdk 33
 
     defaultConfig {

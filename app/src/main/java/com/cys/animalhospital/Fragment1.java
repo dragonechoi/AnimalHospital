@@ -1,29 +1,28 @@
 package com.cys.animalhospital;
 
 
-
-
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 public class Fragment1 extends Fragment {
@@ -39,7 +38,8 @@ public class Fragment1 extends Fragment {
     ImageView iv;
     String key = "c10fe98acffa44a8b1d82149f9fd9b93";
 
-    int i=1;
+    int i = 1;
+    int pSize = 5;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -54,9 +54,6 @@ public class Fragment1 extends Fragment {
     }
 
 
-
-
-
     void clickBtn() {
 
         new Thread() {
@@ -64,12 +61,17 @@ public class Fragment1 extends Fragment {
             public void run() {
                 // https://openapi.gg.go.kr/Animalhosptl?KEY=c10fe98acffa44a8b1d82149f9fd9b93&Type=xml&pIndex=1&pSize=3
 
-               String address = "https://openapi.gg.go.kr/Animalhosptl/" +
-                       "?Key="+key
-                       +"&Type=xml"
-                      +"&pIndex=1"
-                      +"&pSize=5";
-
+                String address = null;
+                try {
+                    address = "https://openapi.gg.go.kr/Animalhosptl?" +
+                            "KEY=" + key +
+                            "&Type=xml" +
+                            "&pIndex=1" +
+                            "&pSize=5" + pSize +
+                            "&SIGUN_NM=" + URLEncoder.encode("수원시", "UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    throw new RuntimeException(e);
+                }
 
                 try {
                     URL url = new URL(address);
@@ -131,6 +133,7 @@ public class Fragment1 extends Fragment {
                                 String tagName2 = xpp.getName();
                                 if (tagName2.equals("Animalhosptl")) {
                                     animalItems.add(animalItem);
+                                    animalItem = null;
                                 }
                                 break;
                         }
@@ -153,7 +156,9 @@ public class Fragment1 extends Fragment {
                 }
             }
         }.start();
+
     }
+
 }
 
 
